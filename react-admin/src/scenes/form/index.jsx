@@ -53,7 +53,7 @@ const Form = () => {
             <Box
               display="grid"
               gap="30px"
-              gridTemplateColums="repeat(4, minmax(0,1fr))"
+              gridtemplatecolums="repeat(4, minmax(0,1fr))"
               sx={{
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
               }}
@@ -92,11 +92,12 @@ const Form = () => {
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.email}
-                name="firstName"
+                name="email"
                 error={!!touched.email && !!errors.email}
                 helperText={touched.email && errors.email}
                 sx={{ gridColumn: "span 4" }}
               ></TextField>
+
               <TextField
                 fullWidth
                 variant="filled"
@@ -105,11 +106,12 @@ const Form = () => {
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.contact}
-                name="contacts"
-                error={!!touched.contact && !!errors.contact}
+                name="contact"
+                error={!!touched.contact && !!errors.contacts}
                 helperText={touched.contact && errors.contact}
                 sx={{ gridColumn: "span 4" }}
               ></TextField>
+
               <TextField
                 fullWidth
                 variant="filled"
